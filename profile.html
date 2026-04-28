@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân - VP Computer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header-placeholder></header-placeholder>
+    <div id="toast-container"></div>
+    <div class="profile-container">
+        <h1>Hồ Sơ Của Tôi</h1>
+        <div class="profile-avatar-editor">
+            <img id="profile-img" src="" alt="Avatar">
+            <button class="edit-avatar-btn" title="Đổi ảnh bằng link"><i class="fas fa-camera"></i></button>
+        </div>
+        <form class="profile-info" id="profile-form">
+            <div class="form-group">
+                <label>Email (Không thể thay đổi)</label>
+                <input type="email" id="profile-email" disabled>
+            </div>
+            <div class="form-group">
+                <label>Tên hiển thị</label>
+                <input type="text" id="profile-name" placeholder="Nhập tên mới">
+            </div>
+            <div class="form-group">
+                <label>Số Điện Thoại</label>
+                <input type="text" id="profile-phone" placeholder="Nhập số điện thoại mới">
+            </div>
+            <div class="form-group">
+                <label>Link ảnh đại diện (URL)</label>
+                <input type="text" id="profile-photo-url" placeholder="Dán link ảnh tại đây">
+            </div>
+
+            <button type="submit" class="btn-update">Cập nhật thông tin</button>
+        </form>
+    </div>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/loadprofile.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Protech</title>
+
+    <!-- Các link font và icon không đổi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Link tới các file CSS cần thiết -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Thêm dòng này vào trong thẻ <head> của mỗi file HTML -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+
+    <header-placeholder></header-placeholder>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Liên Hệ Với Chúng Tôi</h1>
+            <p class="page-subtitle">Chúng tôi luôn sẵn sàng lắng nghe bạn. Vui lòng điền vào biểu mẫu bên dưới hoặc
+                liên hệ trực tiếp.</p>
+
+            <div class="contact-layout">
+                <!-- Cột thông tin -->
+                <div class="contact-info">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Học Viện Ngân Hàng, 12 P. Chùa Bộc, Đống Đa, Hà Nội</li>
+                        <li><i class="fas fa-phone"></i> Hotline: 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> Email: protechsupport@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Giờ làm việc: 8:00 - 21:00 (T2 - CN)</li>
+                    </ul>
+                </div>
+                <!-- Cột Form -->
+                <div class="contact-form" id="contact_form">
+                    <h3>Gửi Tin Nhắn</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Chủ đề</label>
+                            <select id="subject" name="subject">
+                                <option>Tư vấn cấu hình</option>
+                                <option>Hỗ trợ kỹ thuật</option>
+                                <option>Góp ý, khiếu nại</option>
+                                <option>Vấn đề khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nội dung</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Gửi Tin Nhắn</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Phần bản đồ -->
+            <div class="map-container">
+                <h3>Tìm Chúng Tôi Trên Bản Đồ</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.597933649167!2d105.82612117599824!3d21.008748188464192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49bcd94b693a!2zSOG7jWMgVmnhu4duIE5nw6JuIEjDoG5n!5e0!3m2!1svi!2s!4v1766285899597!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer-placeholder></footer-placeholder>
+    <aside id="cart-sidebar" class="cart-sidebar"></aside>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script type="module" src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/contact.js"></script>
+    <script type="module" src="js/loadprofile.js"></script>
+
+</body>
+
+</html>

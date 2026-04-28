@@ -1,0 +1,129 @@
+.profile-container { 
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    text-align: center; 
+}
+
+.profile-avatar-editor { 
+    position: relative; 
+    display: inline-block;
+    margin-bottom: 20px; 
+}
+.profile-avatar-editor img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--primary-color); 
+}
+
+.edit-avatar-btn { 
+    position: absolute; 
+    bottom: 5px; 
+    right: 5px; 
+    background: 
+    var(--primary-color); 
+    color: #fff; 
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    border: none; 
+}
+
+.profile-info { 
+    text-align: left; 
+    margin-top: 20px; 
+
+}.profile-info .form-group { 
+    margin-bottom: 15px; 
+}
+
+.profile-info label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+.profile-info input { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid var(--border-color); 
+    border-radius: 5px; }
+
+.btn-update { 
+    width: 100%; padding: 12px; 
+    background: var(--primary-color); 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px;
+     cursor: pointer; 
+    font-weight: bold; 
+}
+
+/* Tối ưu lại container chính cho di động */
+.profile-container { 
+    max-width: 600px; 
+    margin: 30px auto; 
+    padding: 20px; 
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    text-align: center; 
+    /* Đảm bảo không bị dính sát mép màn hình điện thoại */
+    width: calc(100% - 30px); 
+}
+
+/* Điều chỉnh kích thước ảnh đại diện trên màn hình nhỏ */
+.profile-avatar-editor img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--primary-color); 
+}
+
+/* Media Query cho điện thoại (dưới 768px) */
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Giảm cỡ chữ tiêu đề */
+    }
+
+    .profile-info label {
+        font-size: 0.9rem; /* Chữ nhãn nhỏ lại một chút cho gọn */
+    }
+
+    .profile-info input {
+        padding: 12px; /* Tăng diện tích chạm cho ngón tay */
+        font-size: 16px; /* Ngăn trình duyệt iOS tự động zoom khi focus vào input */
+    }
+
+    .btn-update {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Media Query cho điện thoại cực nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+    .profile-avatar-editor img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-container {
+        padding: 10px;
+    }
+}

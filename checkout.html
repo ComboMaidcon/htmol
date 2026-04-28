@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Protech</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <!-- Thêm dòng này vào trong thẻ <head> của mỗi file HTML -->
+<link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Cột thông tin khách hàng -->
+        <div class="customer-info">
+            <div class="info-wrapper">
+                <a href="index.html" class="checkout-logo">Protech <span>Computer</span></a>
+                
+                <h2>Thông Tin Giao Hàng</h2>
+                <form action="#" class="checkout-form" id="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group floating-label">
+                            <input type="text" id="fullname" name="fullname" placeholder=" " required>
+                            <label for="fullname">Họ và tên</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                         <div class="form-group floating-label">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="tel" id="phone" name="phone" placeholder=" " required>
+                            <label for="phone">Số điện thoại</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group floating-label">
+                            <textarea id="address" name="address" placeholder=" " rows="3" required></textarea>
+                            <label for="address">Địa chỉ chi tiết</label>
+                        </div>
+                    </div>
+                </form>
+
+                <h2>Phương Thức Thanh Toán</h2>
+<div class="payment-methods">
+    <label class="payment-option">
+        <input type="radio" name="payment" value="cod" checked>
+        <div class="option-content">
+            <span>Thanh toán khi nhận hàng (COD)</span>
+        </div>
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment" value="bank">
+        <div class="option-content">
+            <span>Chuyển khoản ngân hàng</span>
+        </div>
+    </label>
+
+    <div id="bank-transfer-info" class="bank-transfer-box" style="display: none;">
+        <h3 class="bank-title">Thông tin chuyển khoản</h3>
+        
+        <div class="bank-details-card">
+            <div class="bank-row">
+                <span class="label">Ngân hàng:</span>
+                <span class="value">Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank)</span>
+            </div>
+            <div class="bank-row">
+                <span class="label">Số tài khoản:</span>
+                <div class="account-wrapper">
+                    <span class="value highlight-blue" id="bank-account-number">1234567890</span>
+                    <button type="button" class="btn-copy" id="btn-copy-acc">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+            <div class="bank-row">
+                <span class="label">Chủ tài khoản:</span>
+                <span class="value uppercase">CÔNG TY TNHH PROTECH COMPUTER</span>
+            </div>
+            <div class="bank-row">
+                <span class="label">Chi nhánh:</span>
+                <span class="value">Chi nhánh Hà Nội</span>
+            </div>
+            <div class="bank-row">
+                <span class="label">Số tiền:</span>
+                <span class="value highlight-green" id="transfer-amount">0₫</span>
+            </div>
+            <div class="bank-row content-row">
+                <span class="label">Nội dung chuyển khoản:</span>
+                <div class="transfer-content-box">
+                    [Mã hoá đơn]
+                </div>
+            </div>
+        </div>
+
+        <div class="bank-instructions">
+            <h4>Hướng dẫn:</h4>
+            <ul>
+                <li>Chuyển khoản đúng số tiền: <strong id="instruction-amount">0₫</strong></li>
+                <li>Nội dung chuyển khoản: <strong>[Mã hoá đơn]</strong></li>
+                <li>Sau khi chuyển khoản, vui lòng chụp ảnh biên lai và lưu lại để đối chiếu khi cần thiết.</li>
+                <li>Đơn hàng sẽ được xử lý sau khi xác nhận thanh toán thành công (thường trong vòng 24 giờ).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <!-- Cột tóm tắt đơn hàng -->
+        <div class="order-summary-checkout">
+            <div class="summary-wrapper">
+                <h3>Đơn Hàng Của Bạn</h3>
+                <div class="summary-items" id="summary-items">
+                    <!-- Sản phẩm sẽ được JS chèn vào đây -->
+                </div>
+                <div class="summary-total">
+                    <span>Tổng cộng</span>
+                    <strong id="summary-total-price">0₫</strong>
+                </div>
+                <button type="submit" form="checkout-form" class="btn-place-order">Hoàn Tất Đơn Hàng</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Nhúng thư viện jsPDF và file script của trang -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

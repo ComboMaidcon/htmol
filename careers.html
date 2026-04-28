@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Dụng - Protech</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/careers.css">
+</head>
+<body>
+    <header-placeholder></header-placeholder>
+
+    <main>
+        <section class="careers-hero">
+            <div class="container">
+                <h1>Gia Nhập Đội Ngũ Protech</h1>
+                <p>Cùng chúng tôi xây dựng tương lai ngành công nghệ máy tính tại Việt Nam.</p>
+            </div>
+        </section>
+
+        <section class="job-listings">
+            <div class="container">
+                <h2 class="section-title">Các Vị Trí Đang Tuyển Dụng</h2>
+                
+                <!-- Vị trí 1 -->
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Nhân viên Tư vấn Kỹ thuật & Bán hàng</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Hà Nội</span>
+                            <span><i class="fas fa-briefcase"></i> Toàn thời gian</span>
+                        </div>
+                        <p class="job-description">Am hiểu về linh kiện PC, đam mê công nghệ, có khả năng tư vấn và xây dựng cấu hình cho khách hàng...</p>
+                    </div>
+                    <div class="job-apply">
+                        <a href="#apply-form" class="btn-apply">Ứng Tuyển Ngay</a>
+                    </div>
+                </div>
+
+                <!-- Vị trí 2 -->
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3>Kỹ thuật viên Lắp ráp & Cài đặt</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Hà Nội</span>
+                            <span><i class="fas fa-briefcase"></i> Toàn thời gian</span>
+                        </div>
+                        <p class="job-description">Có kinh nghiệm lắp ráp PC, đi dây gọn gàng, cài đặt phần mềm và khắc phục sự cố máy tính cơ bản...</p>
+                    </div>
+                    <div class="job-apply">
+                        <a href="#apply-form" class="btn-apply">Ứng Tuyển Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apply-section" id="apply-form">
+            <div class="container">
+                 <h2 class="section-title">Nộp Hồ Sơ Của Bạn</h2>
+<form class="apply-form" id="recruitment-form">
+    <div class="form-row">
+        <input type="text" id="app-name" placeholder="Họ và tên" required>
+        <input type="email" id="app-email" placeholder="Email" required>
+    </div>
+    <div class="form-row">
+        <input type="tel" id="app-phone" placeholder="Số điện thoại" required>
+        
+        <select id="app-position" required>
+            <option value="" disabled selected>-- Chọn vị trí ứng tuyển --</option>
+            <option value="tu-van">Nhân viên Tư vấn Kỹ thuật & Bán hàng</option>
+            <option value="ky-thuat">Kỹ thuật viên Lắp ráp & Cài đặt</option>
+        </select>
+        </div>
+    <div class="form-row">
+         <label for="cv-upload">Tải lên CV của bạn (PDF, DOC, DOCX):</label>
+         <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx" required>
+    </div>
+    <button type="submit" class="btn-submit">Gửi Hồ Sơ</button>
+</form>
+            </div>
+        </section>
+    </main>
+    
+    <footer-placeholder></footer-placeholder>
+    <aside id="cart-sidebar" class="cart-sidebar"></aside>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script type="module" src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('recruitment-form');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // Ngăn form gửi dữ liệu đi và tải lại trang
+                e.preventDefault(); 
+                
+                // Lấy các giá trị (HTML5 đã kiểm tra required, nhưng ta lấy để chắc chắn)
+                const name = document.getElementById('app-name').value;
+                const position = document.getElementById('app-position').value;
+                const cv = document.getElementById('cv-upload').value;
+
+                // Nếu người dùng đã điền đủ (dù thuộc tính required đã chặn, nhưng thêm logic cho chắc)
+                if(name && position && cv) {
+                    // HIỆN THÔNG BÁO YÊU CẦU
+                    alert("Hồ sơ của bạn đã được gửi, vui lòng check email trong 24h tiếp theo");
+                    
+                    // Xóa trắng form sau khi gửi thành công
+                    form.reset();
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
